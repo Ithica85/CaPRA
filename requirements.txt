@@ -1,0 +1,21 @@
+# Customer Pain Research Agent
+# Python 3.12+
+
+# Reddit data collection
+apify-client>=1.8.0
+praw>=7.8.0
+
+# LLM providers (install only what you use; all optional at runtime)
+anthropic>=0.40.0
+openai>=1.60.0
+
+# Config & utilities
+python-dotenv>=1.0.1
+rich>=13.9.0
+pydantic>=2.10.0
+tenacity>=9.0.0
+httpx>=0.28.0
+json-repair>=0.30.0
+
+# Web UI
+streamlit>=1.41.0

@@ -1,0 +1,214 @@
+{
+  "niche": "WordPress site owners and agency owners",
+  "subreddits": [
+    "Wordpress",
+    "webdev",
+    "SEO",
+    "webhosting",
+    "WooCommerce"
+  ],
+  "keywords": [
+    "plugin",
+    "slow",
+    "performance",
+    "security",
+    "maintenance",
+    "Yoast",
+    "frustrating",
+    "hate",
+    "broken",
+    "wish"
+  ],
+  "time_filter": "month",
+  "posts_analyzed": 48,
+  "posts_collected": 162,
+  "collector_used": "apify",
+  "llm_provider": "anthropic",
+  "llm_model": "claude-sonnet-4-20250514",
+  "generated_at": "2026-07-29T14:22:11+00:00",
+  "summary": "WordPress site owners and agencies are drowning in plugin-driven complexity: performance collapses under stacking SEO/cache tools, security theater fails against abandoned plugins, WooCommerce updates routinely break checkout, and $50 maintenance retainers cannot cover real firefighting. The recurring desire is a boring, tested, productized stack—performance, security, backups, and updates—that works without weekly babysitting.",
+  "top_pains": [
+    {
+      "rank": 1,
+      "title": "Plugin stack kills performance and creates maintenance hell",
+      "description": "Agency owners and freelancers report that each 'must-have' plugin adds latency and conflict risk. Caching and optimization plugins fight each other; TTFB spikes after routine SEO plugin installs. Maintenance becomes a weekly babysitting job rather than a set-and-forget system.",
+      "desired_outcome": "A simple, opinionated performance stack that stays fast without constant tuning and does not break when one plugin updates.",
+      "intensity_score": 88,
+      "frequency": 14,
+      "emotional_language_score": 82,
+      "recency_score": 74,
+      "upvote_signal": 1240,
+      "category": "performance",
+      "evidence": [
+        {
+          "quote": "We added one SEO plugin and now TTFB is 3+ seconds. Caching plugins conflict with each other. I wish there was a simple performance stack that just worked.",
+          "url": "https://www.reddit.com/r/Wordpress/comments/demo001/site_is_so_slow/",
+          "subreddit": "Wordpress",
+          "upvotes": 214,
+          "source_type": "post"
+        },
+        {
+          "quote": "I hate how every 'must-have' plugin adds 200ms. Maintenance is half my job now.",
+          "url": "https://www.reddit.com/r/Wordpress/comments/demo001/c001/",
+          "subreddit": "Wordpress",
+          "upvotes": 89,
+          "source_type": "comment"
+        }
+      ],
+      "keywords_matched": [
+        "plugin",
+        "slow",
+        "performance",
+        "frustrating",
+        "wish"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "WooCommerce and plugin updates silently break checkout",
+      "description": "Store owners describe quarterly nightmares where a WooCommerce core or payment gateway update blanks checkout. Support defaults to 'disable all plugins,' which is not a viable ops model for non-developers. Agencies struggle to price the risk into retainers.",
+      "desired_outcome": "A managed update pipeline with staging, compatibility checks, and safe rollbacks so revenue-critical checkout never surprises them on a Monday morning.",
+      "intensity_score": 85,
+      "frequency": 11,
+      "emotional_language_score": 80,
+      "recency_score": 78,
+      "upvote_signal": 980,
+      "category": "reliability",
+      "evidence": [
+        {
+          "quote": "Payment gateway plugin + WooCommerce core update = blank checkout. I run a store, not a software company.",
+          "url": "https://www.reddit.com/r/WooCommerce/comments/demo004/updates_broke/",
+          "subreddit": "WooCommerce",
+          "upvotes": 241,
+          "source_type": "post"
+        },
+        {
+          "quote": "Same nightmare every quarter. Staging sites help but clients won't pay for proper maintenance.",
+          "url": "https://www.reddit.com/r/WooCommerce/comments/demo004/c005/",
+          "subreddit": "WooCommerce",
+          "upvotes": 67,
+          "source_type": "comment"
+        }
+      ],
+      "keywords_matched": [
+        "plugin",
+        "broken",
+        "maintenance",
+        "frustrating"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Security tools alert but abandoned plugins still get sites hacked",
+      "description": "Owners feel security plugins create alert fatigue without solving the root cause: bloated stacks full of unmaintained free plugins. When breaches happen, clients blame hosting or the agency. Detection of dead plugins and safe replacements is largely manual.",
+      "desired_outcome": "Automatic detection of abandoned/vulnerable plugins with guided, low-risk replacements—and backups that have been restore-tested, not just 'green checkmarked.'",
+      "intensity_score": 81,
+      "frequency": 9,
+      "emotional_language_score": 76,
+      "recency_score": 70,
+      "upvote_signal": 890,
+      "category": "security",
+      "evidence": [
+        {
+          "quote": "Wordfence alerts me all day but the real problem is plugin graveyard. Clients have 40 plugins, half unmaintained.",
+          "url": "https://www.reddit.com/r/webhosting/comments/demo002/security_plugins/",
+          "subreddit": "webhosting",
+          "upvotes": 178,
+          "source_type": "post"
+        },
+        {
+          "quote": "Updraft 'succeeded' but restore was empty. Absolute nightmare. Security is broken if backups aren't restore-tested.",
+          "url": "https://www.reddit.com/r/Wordpress/comments/demo009/backups_failed/",
+          "subreddit": "Wordpress",
+          "upvotes": 289,
+          "source_type": "post"
+        }
+      ],
+      "keywords_matched": [
+        "security",
+        "plugin",
+        "hate",
+        "broken",
+        "wish"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "SEO plugins upsell basics and train clients on the wrong metrics",
+      "description": "Freelancers and agencies resent freemium SEO plugins that gate redirects and schema, then gamify green lights that clients obsess over. Conflicting sitemaps and schema from multiple tools create maintenance debt and awkward client conversations about $99/year plans.",
+      "desired_outcome": "A transparent, boring SEO toolkit—paid simply—with technical essentials included and without vanity scoring that misleads non-experts.",
+      "intensity_score": 74,
+      "frequency": 8,
+      "emotional_language_score": 72,
+      "recency_score": 68,
+      "upvote_signal": 720,
+      "category": "pricing",
+      "evidence": [
+        {
+          "quote": "It's so hard to explain to clients why they need a $99/year plan just for redirects. Broken schema, conflicting sitemaps — maintenance hell.",
+          "url": "https://www.reddit.com/r/SEO/comments/demo003/yoast_upsells/",
+          "subreddit": "SEO",
+          "upvotes": 156,
+          "source_type": "post"
+        },
+        {
+          "quote": "Hate the green light gamification. Clients obsess over Yoast scores that don't matter.",
+          "url": "https://www.reddit.com/r/SEO/comments/demo003/c004/",
+          "subreddit": "SEO",
+          "upvotes": 102,
+          "source_type": "comment"
+        }
+      ],
+      "keywords_matched": [
+        "Yoast",
+        "hate",
+        "broken",
+        "wish",
+        "maintenance"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Maintenance retainers underprice real WordPress firefighting",
+      "description": "Agency owners report that clients expect $50/mo care plans while the real work—plugin conflicts, phishing, failed backups, PHP bumps—is unpredictable and expensive. Productized white-label maintenance with clear SLAs is repeatedly requested but hard to find or trust.",
+      "desired_outcome": "A productized, white-label maintenance service with honest SLAs and pricing that reflects incident response—not just 'updates + uptime ping.'",
+      "intensity_score": 71,
+      "frequency": 7,
+      "emotional_language_score": 68,
+      "recency_score": 72,
+      "upvote_signal": 610,
+      "category": "workflow",
+      "evidence": [
+        {
+          "quote": "Clients want $50/mo care plans. Reality: plugin conflicts, phishing, failed backups, PHP version bumps. It's broken economics.",
+          "url": "https://www.reddit.com/r/Wordpress/comments/demo006/maintenance_retainers/",
+          "subreddit": "Wordpress",
+          "upvotes": 198,
+          "source_type": "post"
+        },
+        {
+          "quote": "We raised to $150/mo and still undercharge for security incidents. Frustrating.",
+          "url": "https://www.reddit.com/r/Wordpress/comments/demo006/c007/",
+          "subreddit": "Wordpress",
+          "upvotes": 44,
+          "source_type": "comment"
+        }
+      ],
+      "keywords_matched": [
+        "maintenance",
+        "plugin",
+        "security",
+        "frustrating",
+        "broken",
+        "wish"
+      ]
+    }
+  ],
+  "metadata": {
+    "max_posts_requested": 175,
+    "top_n": 5,
+    "dry_run": false,
+    "version": "1.0.0",
+    "note": "Sample output illustrating the expected schema. Live runs replace evidence URLs/quotes with real scraped data."
+  }
+}
