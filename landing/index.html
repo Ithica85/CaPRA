@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SiteSafe Ops — WordPress breach recovery &amp; update care</title>
+  <meta name="description" content="Recover compromised WordPress sites, harden what free security plugins miss, and run tested updates so production stays up." />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a222c;
+      --text: #e8eef4;
+      --muted: #9aabbc;
+      --accent: #3dd6c6;
+      --accent-dim: #2a9d8f;
+      --danger: #ff6b6b;
+      --border: #2a3542;
+      --radius: 12px;
+      --max: 720px;
+      --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+    header {
+      padding: 1rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      font-size: 0.95rem;
+      color: var(--accent);
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.35rem);
+      line-height: 1.2;
+      margin: 0 0 1rem;
+      font-weight: 750;
+    }
+    h1 .line2 { color: var(--danger); }
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 1.75rem;
+      max-width: 38em;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid transparent;
+      font-size: 0.95rem;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #0a1210;
+    }
+    .btn-primary:hover { background: #5ee0d2; }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--muted); }
+    .fine {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    section {
+      margin: 2.75rem 0;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin: 0 0 1rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 600px) {
+      .grid.three { grid-template-columns: repeat(3, 1fr); }
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.2rem;
+    }
+    .card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    ul.check {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul.check li {
+      padding: 0.45rem 0 0.45rem 1.5rem;
+      position: relative;
+      color: var(--muted);
+    }
+    ul.check li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .steps li {
+      counter-increment: step;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1rem 1rem 3.25rem;
+      margin-bottom: 0.65rem;
+      position: relative;
+      color: var(--muted);
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .price {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .price strong { color: var(--text); }
+    .note {
+      background: #1a2830;
+      border-left: 3px solid var(--accent);
+      padding: 0.85rem 1rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .setup-banner {
+      background: #2a2210;
+      border: 1px solid #6b5420;
+      color: #f0d78c;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    .setup-banner code {
+      background: #1a1608;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!--
+      SETUP: Replace the two placeholders below before sharing publicly.
+      BOOKING: Calendly / SavvyCal / Google appointment link
+      EMAIL: mailto or form endpoint
+    -->
+    <div class="setup-banner" id="setup-banner">
+      <strong>Before you share:</strong> set your booking link and email in this file
+      (search for <code>YOUR_BOOKING_LINK</code> and <code>YOUR_EMAIL</code>).
+      Hide this banner by deleting the <code>#setup-banner</code> block.
+    </div>
+
+    <header>
+      <div class="brand">SiteSafe Ops</div>
+    </header>
+
+    <p class="eyebrow">WordPress recovery &amp; care</p>
+    <h1>
+      Your free security plugin said you were fine.<br />
+      <span class="line2">Google and the malware disagreed.</span>
+    </h1>
+    <p class="lead">
+      We recover compromised WordPress sites, clean what free tools miss, and run
+      tested updates so the next theme or plugin release doesn’t take production down.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="YOUR_BOOKING_LINK">Book a free 15-minute triage</a>
+      <a class="btn btn-secondary" href="mailto:YOUR_EMAIL?subject=Cleanup%20quote%20request">Request a cleanup quote</a>
+    </div>
+    <p class="fine">No spam. Written scope before any paid work. We don’t claim “unhackable forever.”</p>
+
+    <section>
+      <h2>What we do</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Recover</h3>
+          <p>Full cleanup after malware, redirects, and SEO freefall — not a superficial “scan clean.”</p>
+        </div>
+        <div class="card">
+          <h3>Harden</h3>
+          <p>Baseline that assumes free Wordfence or Sucuri alone is not enough.</p>
+        </div>
+        <div class="card">
+          <h3>Steady updates</h3>
+          <p>Theme/plugin changes checked so Elementor, Astra, LMS, and cache surprises stay out of production.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who this is for</h2>
+      <ul class="check">
+        <li>Site owners hacked <em>with</em> security plugins installed</li>
+        <li>Sites that “don’t show up on Google” after a breach or spam injection</li>
+        <li>Agencies buried in client fires and care plans that can’t fund real response</li>
+        <li>Stores and content sites that can’t gamble on blind auto-updates</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong style="color:var(--text)">Triage (15 min)</strong> — Hack vs update-break, host, backups, symptoms, security stack.</li>
+        <li><strong style="color:var(--text)">Recover &amp; harden</strong> — Cleanup, baseline, notes on what failed (plugin theater, host “nothing found,” etc.).</li>
+        <li><strong style="color:var(--text)">Optional care</strong> — Monthly tested updates + security checks + a short report you can send clients.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Pricing signal</h2>
+      <p class="price">
+        <strong>Emergency cleanup:</strong> typically $400–$1,500 per site (scope-dependent).<br />
+        <strong>Care plans:</strong> from $99/mo per site · agency multi-site packs available.<br />
+        Exact quote after triage — no scare tactics in the form.
+      </p>
+      <p class="note">
+        Built from real WordPress operator pain research (security plugins failing in the wild,
+        silent update breaks, SEO loss after compromise). Research-backed messaging via
+        <a href="https://github.com/Ithica85/CaPRA">CaPRA</a> — Customer Pain Research Agent.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ready when you are</h2>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="YOUR_BOOKING_LINK">Book free triage</a>
+        <a class="btn btn-secondary" href="mailto:YOUR_EMAIL?subject=Cleanup%20quote%20request">Email for a quote</a>
+      </div>
+    </section>
+
+    <footer>
+      SiteSafe Ops · Working name · Concierge WordPress recovery &amp; care · Not a free plugin replacement ·
+      Not an enterprise SOC.
+    </footer>
+  </div>
+</body>
+</html>
