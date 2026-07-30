@@ -2,7 +2,7 @@
 
 Saved for continuation. Aligns this project with **The Startup Ideas Podcast / Cody Schneider “Build Marketing Agents”** system (Jul 2026), plus our addition: **business idea → market back to the community** before (or alongside) full paid-ad automation.
 
-Last updated: 2026-07-30
+Last updated: 2026-07-30 (Steps A–D assets drafted; GTM execution in market)
 
 **Source episode / article:** SIP — *Build Marketing Agents* (Cody Schneider).  
 Full episode links in the article thread (Apple / Spotify / YouTube).
@@ -19,9 +19,12 @@ Full episode links in the article thread (Apple / Spotify / YouTube).
 | Browser UI (`app.py` / `start_ui.command`) | Working |
 | CLI (`research_agent.py`) | Working |
 | JSON export to `output/` | Working |
-| WordPress default niche | Demo proven; **Live run is next** |
+| WordPress default niche | **Live Apify run done** (2026-07-30) |
+| Step B — bet selection | **Done** — security recovery + tested updates |
+| Step C — one-pager + creative brief | **Done** — `docs/offers/sitesafe-ops-one-pager.md` |
+| Step D — market test assets | **Done** — landing + playbook; *execution* (publish, outreach) is on you |
 | Scheduling (cron / Railway / Render) | Not built yet |
-| Opportunity scoring / business idea packs | Not built yet |
+| Opportunity scoring / business idea packs | Manual (docs); not in-app yet |
 | Creative / ad handoff agent | Not built yet |
 | Meta Ads API + warehouse closed loop | Not built yet |
 
@@ -142,7 +145,7 @@ Niche communities (Reddit, later Ads Library / YouTube / reviews)
 
 This is the active sequence. Do them in order.
 
-### Step A — Live WordPress research run *(SIP 01)* ⬅️ **you are here**
+### Step A — Live WordPress research run *(SIP 01)* ✅
 
 **Do**
 
@@ -169,7 +172,9 @@ This is the active sequence. Do them in order.
 
 ---
 
-### Step B — Phase 1: score pains → pick a bet
+### Step B — Phase 1: score pains → pick a bet ✅
+
+**Locked bet (Live data):** Sites get hacked despite security plugins (+ package tested updates). Offer working name: **SiteSafe Ops**.
 
 Score each of the top 5 (or shortlist to **top 3** like the article):
 
@@ -189,7 +194,9 @@ Optional later tooling: opportunity scorer in the app.
 
 ---
 
-### Step C — Phase 2: idea workshop + one-pager *(feeds SIP 02)*
+### Step C — Phase 2: idea workshop + one-pager *(feeds SIP 02)* ✅
+
+**Artifact:** [`docs/offers/sitesafe-ops-one-pager.md`](docs/offers/sitesafe-ops-one-pager.md)
 
 For the bet pain:
 
@@ -210,15 +217,25 @@ Also produce a **creative brief** (handoff to SIP 02):
 
 ---
 
-### Step D — Phase 3: market test *(before full SIP 03–04)*
+### Step D — Phase 3: market test *(before full SIP 03–04)* ⬅️ **you are here (execution)**
+
+**Assets ready:**
+
+| Asset | Path |
+|-------|------|
+| Market-test playbook | [`docs/offers/sitesafe-ops-step-d-market-test.md`](docs/offers/sitesafe-ops-step-d-market-test.md) |
+| Landing page | [`landing/index.html`](landing/index.html) |
 
 Ship the smallest public test using community language:
 
-1. Organic value-first post or helpful answers in the subreddits that produced the pain  
-2. Landing + waitlist / audit / free tool / call  
-3. Only then lightweight paid (Meta/Google) once message shows signal  
+1. Set `YOUR_BOOKING_LINK` + `YOUR_EMAIL` in the landing HTML; publish (Carrd / domain / GitHub Pages)  
+2. Organic value-first checklist answers in the communities that produced the pain  
+3. 10 agency outreaches (white-label pilot)  
+4. Only then lightweight paid (Meta/Google) once message shows signal  
 
 **Done when:** real replies, signups, or calls — or a clear kill and return to Step A on another pain.
+
+**14-day win:** 1 paid cleanup **or** 3 triage calls that ask for a proposal.
 
 ---
 
@@ -375,9 +392,12 @@ When the full SIP stack exists:
 
 ## Pick-up checklist (next session)
 
-- [ ] **Step A:** Live WordPress run → `output/pains_*.json` (not demo)  
-- [ ] **Step B:** Score top 5 / shortlist top 3 → lock one bet  
-- [ ] **Step C:** One-pager + creative brief from that pain  
-- [ ] **Step D:** Smallest community/landing test  
+- [x] **Step A:** Live WordPress run (Apify) — download + `output/pains_wordpress_LIVE_from_download.json` (local)  
+- [x] **Step B:** Bet locked — security recovery + tested updates (SiteSafe Ops)  
+- [x] **Step C:** One-pager — `docs/offers/sitesafe-ops-one-pager.md`  
+- [x] **Step D assets:** Playbook + `landing/index.html`  
+- [ ] **Step D execution:** Publish landing, replace CTA placeholders, triage form live  
+- [ ] **Step D execution:** 3 helpful community posts + 10 agency outreaches  
+- [ ] **Step D outcome:** 1 paid cleanup or 3 proposal-stage calls (or kill/pivot)
 
 Then: creative agent (SIP 02) → paid + warehouse (SIP 03–04) → cloud cadence (SIP 05).

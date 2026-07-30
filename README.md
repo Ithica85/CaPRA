@@ -37,20 +37,23 @@ We’re not building the full marketing-agent stack yet (creative gen, Meta Ads 
 | Live Reddit (Apify) + LLM ranking | Ready |
 | Browser UI + CLI | Working |
 | JSON export to `output/` | Working |
-| WordPress defaults | Demo proven; **Live run is next** |
-| Opportunity scoring / idea packs | Not built (manual for now) |
+| WordPress defaults | Live Apify research done (2026-07-30) |
+| First offer (GTM) | **SiteSafe Ops** — breach recovery + tested-update care |
+| Opportunity scoring / idea packs | Manual docs (not in-app yet) |
 | Creative / Meta / warehouse / schedule | Roadmap — see [PLAN.md](PLAN.md) |
 
-### Next four steps (active sequence)
+### Four steps (A–D)
 
-| Step | What | SIP map |
-|------|------|---------|
-| **A** | **Live WordPress research run** → `output/pains_*.json` | 01 Research |
-| **B** | Score top 5 / shortlist top 3 → **pick one bet** | Opportunity filter |
-| **C** | Idea **one-pager** + **creative brief** (hooks from real quotes) | Feeds 02 Creative |
-| **D** | Smallest **community / landing** market test | Before 03–04 ads loop |
+| Step | Status | Where |
+|------|--------|--------|
+| **A** Live WordPress research | Done | Local `output/` / your download |
+| **B** Pick a bet | Done | Security + safe updates |
+| **C** One-pager + creative brief | Done | [docs/offers/sitesafe-ops-one-pager.md](docs/offers/sitesafe-ops-one-pager.md) |
+| **D** Market test | **Assets ready — execute** | [docs/offers/sitesafe-ops-step-d-market-test.md](docs/offers/sitesafe-ops-step-d-market-test.md) · [landing/index.html](landing/index.html) |
 
-Full success criteria, SIP Steps 01–05 mapping, and later phases: **[PLAN.md](PLAN.md)**.
+**Your next actions:** set booking link + email in the landing page, publish it, run outreach (playbook).
+
+Full success criteria and SIP map: **[PLAN.md](PLAN.md)**. More docs: **[docs/README.md](docs/README.md)**.
 
 ### How this maps to the podcast “marketing agent”
 
