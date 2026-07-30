@@ -2,7 +2,7 @@
 
 Saved for continuation. Aligns this project with **The Startup Ideas Podcast / Cody Schneider “Build Marketing Agents”** system (Jul 2026), plus our addition: **business idea → market back to the community** before (or alongside) full paid-ad automation.
 
-Last updated: 2026-07-30 (Steps A–D assets drafted; GTM execution in market)
+Last updated: 2026-07-30 (session saved — continue tomorrow with Step D execution)
 
 **Source episode / article:** SIP — *Build Marketing Agents* (Cody Schneider).  
 Full episode links in the article thread (Apple / Spotify / YouTube).
@@ -390,14 +390,43 @@ When the full SIP stack exists:
 
 ---
 
-## Pick-up checklist (next session)
+## Session save — continue tomorrow (2026-07-30)
 
-- [x] **Step A:** Live WordPress run (Apify) — download + `output/pains_wordpress_LIVE_from_download.json` (local)  
-- [x] **Step B:** Bet locked — security recovery + tested updates (SiteSafe Ops)  
-- [x] **Step C:** One-pager — `docs/offers/sitesafe-ops-one-pager.md`  
-- [x] **Step D assets:** Playbook + `landing/index.html`  
-- [ ] **Step D execution:** Publish landing, replace CTA placeholders, triage form live  
-- [ ] **Step D execution:** 3 helpful community posts + 10 agency outreaches  
-- [ ] **Step D outcome:** 1 paid cleanup or 3 proposal-stage calls (or kill/pivot)
+**Repo:** https://github.com/Ithica85/CaPRA · branch `main` · tip should be at/after `9b03781`  
+**Local project:** `Documents/Projects/Customer Pain Research Agent`  
+**UI (if needed):** http://localhost:8501 or `start_ui.command`
 
-Then: creative agent (SIP 02) → paid + warehouse (SIP 03–04) → cloud cadence (SIP 05).
+### Done this session / arc
+
+| Item | Status |
+|------|--------|
+| CaPRA research agent (demo + Live) | Working |
+| GitHub remote | Pushed |
+| Live WordPress Apify run | Done (user download; local copy in `output/` — gitignored) |
+| Step B bet | **SiteSafe Ops** — hack recovery + tested updates |
+| Step C one-pager | `docs/offers/sitesafe-ops-one-pager.md` |
+| Step D assets | Playbook + `landing/index.html` |
+| README / PLAN | Updated |
+
+### Pick up here (in order)
+
+1. Open [`landing/index.html`](landing/index.html)  
+2. Replace `YOUR_BOOKING_LINK` and `YOUR_EMAIL`; remove setup banner  
+3. Publish landing (Carrd / domain / GitHub Pages)  
+4. Create triage form (fields in Step D playbook)  
+5. Run 14-day GTM: 3 helpful posts + 10 agency outreaches  
+6. Track: 1 paid cleanup **or** 3 proposal-stage calls  
+
+**Playbook:** [`docs/offers/sitesafe-ops-step-d-market-test.md`](docs/offers/sitesafe-ops-step-d-market-test.md)
+
+### Pick-up checklist
+
+- [x] **Step A:** Live WordPress run (Apify)  
+- [x] **Step B:** Bet locked — SiteSafe Ops  
+- [x] **Step C:** One-pager in docs  
+- [x] **Step D assets:** Playbook + landing  
+- [ ] **Step D execution:** Placeholders → publish → form live  
+- [ ] **Step D execution:** Community posts + agency outreach  
+- [ ] **Step D outcome:** Paid cleanup or 3 proposal calls (or kill/pivot)
+
+Then later: creative agent (SIP 02) → paid + warehouse (SIP 03–04) → cloud cadence (SIP 05).
